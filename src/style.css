@@ -10,6 +10,18 @@ body.warm {
   color: #000000;
 }
 
+form,
+footer,
+#city,
+#icon,
+#current-temperature,
+#weather-description,
+#weather-data,
+#feels-like,
+#chronology {
+  text-align: center;
+}
+
 #container.cool {
   max-width: 600px;
   background: linear-gradient(270deg, #5585b5 0%, #bbe4e9 50%);
@@ -28,14 +40,12 @@ body.warm {
 }
 
 #city {
-  text-align: center;
   font-weight: 700;
   font-size: 45px;
   margin-bottom: 10px;
 }
 
 #icon {
-  text-align: center;
   font-size: 50px;
 }
 
@@ -46,16 +56,7 @@ body.warm {
 }
 
 #current-temperature {
-  text-align: center;
   font-size: 50px;
-}
-
-#weather-description {
-  text-align: center;
-}
-
-#weather-data {
-  text-align: center;
 }
 
 #city-input {
@@ -69,16 +70,11 @@ body.warm {
 }
 
 #feels-like {
-  text-align: center;
-}
-
-#feels-like {
   font-size: 20px;
 }
 
 #chronology {
   display: block;
-  text-align: center;
   font-size: 15px;
   font-weight: 700;
 }
@@ -87,10 +83,6 @@ body.warm {
   display: flex;
   justify-content: center;
   height: 90px;
-}
-
-form {
-  text-align: center;
 }
 
 strong {
@@ -102,7 +94,6 @@ input {
 }
 
 footer {
-  text-align: center;
   color: #000000;
   font-size: 14px;
   font-family: "Courier New", Courier, monospace;
