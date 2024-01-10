@@ -82,7 +82,7 @@ footer,
 .flex-temperature {
   display: flex;
   justify-content: center;
-  height: 90px;
+  /* height: 90px;*/
 }
 
 strong {
