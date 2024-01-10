@@ -1,0 +1,115 @@
+body.cool {
+  /*font-family: 'Poppins', sans-serif;*/
+  /* */
+
+  font-family: "Lato", sans-serif;
+  background-color: #0f4869;
+  color: #000000;
+}
+
+body.warm {
+  /*font-family: 'Poppins', sans-serif;*/
+  /* */
+
+  font-family: "Lato", sans-serif;
+  background-color: #fcebc5;
+  color: #000000;
+}
+
+#container.cool {
+  max-width: 600px;
+  background: linear-gradient(270deg, #5585b5 0%, #bbe4e9 50%);
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 10px 30px 30px 10px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#container.warm {
+  max-width: 600px;
+  background: linear-gradient(90deg, #d26330aa 0%, #ceeb76c2 50%);
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 10px 30px 30px 10px;
+}
+
+#city {
+  text-align: center;
+  font-weight: 700;
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+#icon {
+  text-align: center;
+  font-size: 50px;
+}
+
+#units-current-temp {
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+#current-temperature {
+  text-align: center;
+  font-size: 50px;
+}
+
+#weather-description {
+  text-align: center;
+}
+
+#weather-data {
+  text-align: center;
+}
+
+#city-input {
+  width: 30%;
+  padding: 5px 6px;
+}
+
+#city-submit {
+  padding: 5px 8px;
+  height: 30px;
+}
+
+#feels-like {
+  text-align: center;
+}
+
+#feels-like {
+  font-size: 20px;
+}
+
+#chronology {
+  display: block;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.flex-temperature {
+  display: flex;
+  justify-content: center;
+  height: 90px;
+}
+
+form {
+  text-align: center;
+}
+
+strong {
+  font-weight: 700;
+}
+
+input {
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  color: #000000;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+}
