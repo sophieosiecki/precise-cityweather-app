@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- This is the first draft I made to get a sense of the design!-->
+
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- In case I want to use the Poppins font instead
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">-->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City Weather App</title>
+</head>
+<style>
+  body {
+    /*font-family: 'Poppins', sans-serif;*/
+    /* */
+
+    font-family: 'Lato', sans-serif;
+    background-color: #0f4869;
+  }
+
+  #container {
+    max-width: 600px;
+    background: linear-gradient(15deg, #1872a6 0%, #80d0c7 50%);
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px 30px 30px 10px;
+  }
+
+  #day {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  #time {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  #city {
+    text-align: center;
+    font-weight: 700;
+    font-size: 45px;
+    margin-bottom: 10px;
+
+  }
+
+  #icon {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  #units {
+    margin-top: 10px;
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  #current-temperature {
+    text-align: center;
+    font-size: 50px;
+  }
+
+  #weather-description {
+    text-align: center;
+  }
+
+  #weather-data {
+    text-align: center;
+  }
+
+  #city-input {
+    width: 30%;
+    padding: 5px 6px;
+  }
+
+  #city-submit {
+    padding: 5px 8px;
+    height: 30px;
+  }
+
+  #feels-like {
+    text-align: center;
+
+  }
+
+  #feels-like {
+    font-size: 20px;
+  }
+
+  #chronology {
+    display: block;
+    text-align: center;
+
+  }
+
+
+  .flex-temperature {
+    display: flex;
+    justify-content: center;
+    height: 90px;
+  }
+
+  form {
+    text-align: center;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  input {
+    border-radius: 10px;
+
+  }
+
+  footer {
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+
+    a:link {
+      color: rgb(201, 210, 207);
+      text-decoration: none;
+
+    }
+</style>
+
+<body>
+
+  <div id="container">
+    <header>
+
+      <h1 id="city">London</h1>
+      <div class="flex-temperature">
+        <div id="icon">❄️</div>
+        <div id="current-temperature">
+          1
+        </div>
+        <div class="units-metric" id="units">˚C</div>
+      </div>
+      <div id="weather-description">
+        Cloudy, with a chance of meatballs
+      </div>
+      <br />
+      <div id="feels-like">
+        <em><span id="feels-like-text">Feels like:</span></em>
+        <strong><span id="feels-like-temperature">-5</span></strong>
+        <span class="units-metric">˚C</span>
+        <span id="emoji">🥶</span>
+      </div>
+      <br />
+
+      <div id="weather-data">
+        <div class="wind-speed"><span>Wind:</span><strong><span id="wind-speed"> 4</strong>m/s<span></div>
+        <div class="humidity"><span>Humidity:</span><strong><span id="wind-speed"> 10</strong>%<span></div>
+      </div>
+      <br />
+
+      <div id="chronology">
+        <span id="day">
+          Wednesday,
+        </span>
+        <span id="time">
+          21:21:59</span>
+      </div>
+      <br />
+    </header>
+
+    <main>
+      <form>
+        <input type="text" required placeholder="Enter another city..." id="city-input">
+        <input type="submit" id="city-submit" value="Search">
+      </form>
+
+
+
+    </main>
+    <br />
+
+    <footer>
+      [<strong>Badly</strong>] designed and [<em>lovingly</em>] coded by <a href="#" target="_blank">Sophie Osiecki</a>
+      | open-source on <a href="#" target="_blank">GitHub</a> | hosted by <a
+        href="file:///Users/sophie/Library/Mobile%20Documents/com~apple~CloudDocs/0.%20Coding/current-weather-app/current-weather-app/index.html?"" target="
+        _blank">Netlify</a>
+      <p>
+        <strong>© Sophie Osiecki</strong>
+        <br />
+        [who is <em>not</em> a designer]
+      </p>
+    </footer>
+  </div>
+
+  <script>
+
+  </script>
+
+
+</body>
+
+</html>
