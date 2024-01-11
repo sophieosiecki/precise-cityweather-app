@@ -101,14 +101,15 @@ function handleError(response) {
 }
 
 function displayCity(response) {
-  // add logic such that if the response.data.city is true then do the two functions, else handle the error
   let city = response.data.city;
+  let country = response.data.country;
   let cityElement = document.querySelector("#city");
-
+  let countryElement = document.querySelector("#country");
   if (!city) {
     handleError(response);
   } else {
     cityElement.innerHTML = city;
+    countryElement.innerHTML = country.toUpperCase();
     displayCurrentWeatherValues(response);
     displayLastUpdate(response);
   }

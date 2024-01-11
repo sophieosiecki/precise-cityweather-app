@@ -9,10 +9,13 @@ body.warm {
   background-color: #fcebc5;
   color: #000000;
 }
-
+.center-align {
+  text-align: center;
+}
 form,
 footer,
 #city,
+#country,
 #icon,
 #current-temperature,
 #weather-description,
@@ -23,8 +26,14 @@ footer,
   text-align: center;
 }
 
+#country {
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 300;
+}
+
 #container.cool {
-  max-width: 600px;
+  max-width: 640px;
   background: linear-gradient(270deg, #5585b5 0%, #bbe4e9 50%);
   margin: 0 auto;
   border-radius: 10px;
