@@ -97,7 +97,13 @@ function displayLastUpdate(response) {
 
 function handleError(response) {
   let cityElement = document.querySelector("#city");
+  let countryElement = document.querySelector("#country");
   cityElement.innerHTML = "Check for typos...";
+  countryElement.innerHTML = "☺️";
+  let mainContent = document.querySelector("header");
+  console.log(mainContent);
+  mainContent.style.display = "none";
+  //headerElement.classList.add("display-none");
 }
 
 function displayCity(response) {

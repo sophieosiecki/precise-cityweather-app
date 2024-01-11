@@ -12,6 +12,7 @@ body.warm {
 .center-align {
   text-align: center;
 }
+
 form,
 footer,
 #city,
@@ -27,8 +28,7 @@ footer,
 }
 
 #country {
-  font-size: 32px;
-  font-style: italic;
+  font-size: 28px;
   font-weight: 300;
 }
 
@@ -108,7 +108,13 @@ footer,
   display: flex;
   justify-content: center;
 }
-
+h1 {
+  margin-bottom: 0;
+}
+h2 {
+  margin-top: 0;
+  text-align: center;
+}
 strong {
   font-weight: 900;
 }
