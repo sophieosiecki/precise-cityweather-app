@@ -11,6 +11,7 @@
  <link
   href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
   rel="stylesheet">
+ <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
 </head>
 
 <body class="cool">
@@ -23,7 +24,7 @@
     <div id="current-temperature">
      1
     </div>
-    <div class="units-metric" id="units-current-temp">˚C</div>
+    <div class="units-metric" id="units-current-temp"><strong>˚C</strong>/˚F</div>
    </div>
    <br />
    <div id="weather-description">
@@ -56,7 +57,7 @@
   </header>
 
   <main>
-   <form>
+   <form id="form">
     <input type="text" required placeholder="Enter another city..." id="city-input">
     <input type="submit" id="city-submit" value="Search">
    </form>
@@ -64,8 +65,7 @@
   <br />
 
   <footer>
-   [<strong>Badly</strong>] designed and [<em>lovingly</em>] coded by <a href="https://github.com/sophieosiecki"
-    target="_blank">Sophie Osiecki</a>
+   Designed and coded by <a href="https://github.com/sophieosiecki" target="_blank">Sophie Osiecki</a>
    | open-source on <a href="https://github.com/sophieosiecki/current-weather-app" target="_blank">GitHub</a> |
    hosted on <a href="https://sophie-city-weather.netlify.app/">Netlify</a>
    <p>
@@ -74,10 +74,7 @@
     [who is <em>not</em> a designer]
    </p>
   </footer>
-</body>
-
-</html>
-<script src="src/app.js"></script>
+  <script src="src/app.js"></script>
 </body>
 
 </html>

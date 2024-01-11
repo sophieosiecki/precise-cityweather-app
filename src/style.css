@@ -51,7 +51,6 @@ footer,
 
 #units-current-temp {
   margin-top: 10px;
-  font-weight: 900;
   font-size: 20px;
 }
 
@@ -76,17 +75,19 @@ footer,
 #chronology {
   display: block;
   font-size: 15px;
+}
+
+#time {
   font-weight: 700;
 }
 
 .flex-temperature {
   display: flex;
   justify-content: center;
-  /* height: 90px;*/
 }
 
 strong {
-  font-weight: 700;
+  font-weight: 900;
 }
 
 input {
