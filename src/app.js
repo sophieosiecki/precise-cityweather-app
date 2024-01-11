@@ -84,11 +84,34 @@ function displayCurrentWeatherValues(response) {
   changeEmoji(response);
 }
 
+function displayLastUpdate(response) {
+  let lastUpdateElement = document.querySelector("#last-update-time");
+  let timeStamp = response.data.time;
+  let date = new Date(timeStamp * 1000);
+
+  let dateString = date.toLocaleDateString();
+  let timeString = date.toLocaleTimeString();
+  let lastUpdateTimeAndDate = ` ${dateString} @ ${timeString}`;
+  lastUpdateElement.innerHTML = lastUpdateTimeAndDate;
+}
+
+function handleError(response) {
+  let cityElement = document.querySelector("#city");
+  cityElement.innerHTML = "Check for typos...";
+}
+
 function displayCity(response) {
+  // add logic such that if the response.data.city is true then do the two functions, else handle the error
   let city = response.data.city;
   let cityElement = document.querySelector("#city");
-  cityElement.innerHTML = city;
-  displayCurrentWeatherValues(response);
+
+  if (!city) {
+    handleError(response);
+  } else {
+    cityElement.innerHTML = city;
+    displayCurrentWeatherValues(response);
+    displayLastUpdate(response);
+  }
 }
 function getWeatherData(cityValue) {
   let apiKey = "044f639212f8b63toca06640b723a6aa";
@@ -100,8 +123,6 @@ function handleSearchInput(event) {
 
   let cityElementInput = document.querySelector("#city-input");
   let cityValue = cityElementInput.value;
-  // HEADING CHANGE let headingElement = document.querySelector("#city");
-  // HEADING CHANGE headingElement.innerHTML = "Have I got this?";
   getWeatherData(cityValue);
 }
 
