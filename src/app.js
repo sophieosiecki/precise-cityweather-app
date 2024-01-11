@@ -101,7 +101,6 @@ function handleError(response) {
   cityElement.innerHTML = "Check for typos...";
   countryElement.innerHTML = "☺️";
   let mainContent = document.querySelector("header");
-  console.log(mainContent);
   mainContent.style.display = "none";
   //headerElement.classList.add("display-none");
 }
@@ -111,11 +110,14 @@ function displayCity(response) {
   let country = response.data.country;
   let cityElement = document.querySelector("#city");
   let countryElement = document.querySelector("#country");
+  let mainContent = document.querySelector("header");
+
   if (!city) {
     handleError(response);
   } else {
     cityElement.innerHTML = city;
     countryElement.innerHTML = country.toUpperCase();
+    mainContent.style.display = "block";
     displayCurrentWeatherValues(response);
     displayLastUpdate(response);
   }
