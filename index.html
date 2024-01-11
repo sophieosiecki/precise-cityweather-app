@@ -4,7 +4,7 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>City Weather App</title>
+ <title>Precise City Weather</title>
  <link rel="stylesheet" type="text/css" href="src/style.css">
  <link rel="preconnect" href="https://fonts.googleapis.com">
  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,11 @@
 
  <div id="container" class="cool">
   <header>
-   <h1 id="city">London</h1>
+   <h1 id="city"></h1>
    <div class="flex-temperature">
     <div id="icon">❄️</div>
     <div id="current-temperature">
-     1
+
     </div>
     <div class="units-metric" id="units-current-temp"><strong>˚C</strong>/˚F</div>
    </div>
@@ -33,25 +33,25 @@
    <br />
    <div id="feels-like">
     <em><span id="feels-like-text">Feels like:</span></em>
-    <strong><span id="feels-like-temperature">-5</span></strong>
+    <strong><span id="feels-like-temperature"></span></strong>
     <span class="units-metric" id="units-feels-like">˚C</span>
     <span id="emoji">🥶</span>
    </div>
    <br />
 
    <div id="weather-data">
-    <div class="wind-speed"><span>Wind:</span><strong><span id="wind-speed" class="units-metric"> 4</strong>m/s<span>
+    <div class="wind-speed"><span>Wind: </span><strong><span id="wind-speed" class="units-metric"></strong>m/s<span>
     </div>
-    <div class="humidity"><span>Humidity:</span><strong><span id="wind-speed"> 10</strong>%<span></div>
+    <div class="humidity"><span>Humidity: </span><strong><span id="humidity"></strong>%<span></div>
    </div>
    <br />
 
    <div id="chronology">
     <span id="day">
-     Wednesday,
-    </span>
+     Wednesday
+    </span>,
     <span id="time">
-     21:21:59</span>
+    </span>
    </div>
    <br />
   </header>
