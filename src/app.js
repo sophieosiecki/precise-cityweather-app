@@ -102,7 +102,6 @@ function handleError(response) {
   countryElement.innerHTML = "☺️";
   let mainContent = document.querySelector("header");
   mainContent.style.display = "none";
-  //headerElement.classList.add("display-none");
 }
 
 function displayCity(response) {
@@ -124,7 +123,7 @@ function displayCity(response) {
 }
 function getWeatherData(cityValue) {
   let apiKey = "044f639212f8b63toca06640b723a6aa";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${cityValue}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayCity);
 }
 function handleSearchInput(event) {
