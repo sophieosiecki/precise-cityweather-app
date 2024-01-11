@@ -34,7 +34,7 @@ footer,
 
 #container.warm {
   max-width: 600px;
-  background: linear-gradient(90deg, #d26330aa 0%, #ceeb76c2 50%);
+  background: linear-gradient(90deg, #d2633064 0%, #ceeb7678 50%);
   margin: 0 auto;
   border-radius: 10px;
   padding: 10px 30px 30px 10px;
@@ -67,12 +67,14 @@ footer,
 #city-input {
   width: 30%;
   padding: 5px 6px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 #city-submit {
   padding: 5px 8px;
   background-color: #000000;
   color: #ffffff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 #feels-like {
