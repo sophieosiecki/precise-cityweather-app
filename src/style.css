@@ -50,11 +50,12 @@ footer,
 }
 
 #units-current-temp {
-  margin-top: 10px;
+  margin-top: 30px;
   font-size: 20px;
 }
 
 #current-temperature {
+  margin-top: 22px;
   font-size: 50px;
 }
 

@@ -1,7 +1,3 @@
-function changeEmoji(response) {
-  let emojiElement = document.querySelector("#emoji");
-}
-
 function getDayName(dayIndex) {
   const days = [
     "Sunday",
@@ -30,6 +26,43 @@ function updateDayAndTime() {
   currentTimeElement.innerHTML = timeString;
   currentDayElement.innerHTML = dayString;
 }
+
+function changeTheme(response) {
+  let currentTemp = response.data.temperature.current;
+  let container = document.querySelector("#container");
+
+  if (currentTemp < 15) {
+    document.body.classList.remove("warm");
+    container.classList.remove("warm");
+    document.body.classList.add("cool");
+    container.classList.add("cool");
+  } else {
+    document.body.classList.remove("cool");
+    container.classList.remove("cool");
+    document.body.classList.add("warm");
+    container.classList.add("warm");
+  }
+}
+
+function changeIcon(response) {
+  let iconUrl = response.data.condition.icon_url;
+  let iconElement = document.querySelector("#icon");
+  iconElement.innerHTML = `<img src ="${iconUrl}" />`;
+  changeTheme(response);
+}
+
+function changeEmoji(response) {
+  let emojiElement = document.querySelector("#emoji");
+  let currentTemp = response.data.temperature.feels_like;
+  if (currentTemp < 5) {
+    emojiElement.innerHTML = "🥶";
+  } else if (currentTemp < 24) {
+    emojiElement.innerHTML = "😎";
+  } else {
+    emojiElement.innerHTML = "🥵";
+  }
+  changeIcon(response);
+}
 function displayCurrentWeatherValues(response) {
   let currentTemperatureElement = document.querySelector(
     "#current-temperature"
@@ -45,6 +78,9 @@ function displayCurrentWeatherValues(response) {
   let humidityElement = document.querySelector("#humidity");
   let humidity = response.data.temperature.humidity;
   humidityElement.innerHTML = humidity;
+  let descriptionElement = document.querySelector("#weather-description");
+  let description = response.data.condition.description;
+  descriptionElement.innerHTML = description;
   changeEmoji(response);
 }
 
